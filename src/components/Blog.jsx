@@ -12,7 +12,12 @@ function Blog() {
     <div>{name}</div>
     {/*kalibrari arry dengan mapping */}
     <div>{juduls.map(judul =>{
-      return <div>{judul}</div>
+      return (
+        <>
+          <div>{judul}</div>
+          <div>{judul}</div>
+        </>
+      )
     })}</div>
     </>
     

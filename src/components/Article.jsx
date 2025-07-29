@@ -3,9 +3,11 @@ function Article(props) {
     <>
       <h1>{props.name}</h1>
       <div>
-        {props.title.map((title) =>{
-          return <div>{title}</div>
-        })}
+
+        {/* index ini seperti js lenght 0, 1 ,2 untuk id atau panjangnya */}
+        {props.title.map((title, index) => (
+          <div key={index}>{title}</div>
+        ))}
       </div>
     </>
   );

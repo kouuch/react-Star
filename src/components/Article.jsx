@@ -1,14 +1,15 @@
 function Article(props) {
   return (
     <>
-      <h1>{props.name}</h1>
-      <div>
+      <div>{props.title}</div>
+      <small>Date : {props.date}, tags {props.tags.join(", ")}</small>
+      {/* <div>
 
-        {/* index ini seperti js lenght 0, 1 ,2 untuk id atau panjangnya */}
+        index ini seperti js lenght 0, 1 ,2 untuk id atau panjangnya
         {props.title.map((title, index) => (
           <div key={index}>{title}</div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 }

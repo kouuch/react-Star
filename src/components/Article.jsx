@@ -1,7 +1,11 @@
-function Article() {
+function tambah(a, b) {
+  return a + b;
+}
+
+function Article(props) {
   return (
     <>
-      <h1>ini adalah halaman utama</h1>
+      <h1>{props.name}</h1>
     </>
   );
 }

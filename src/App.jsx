@@ -5,7 +5,8 @@ function App() {
   return (
     <>
       <Navbar />
-      <Article />
+      <Article name='budi'/>
+      <Article name='tono'/>
     </>
   );
 }

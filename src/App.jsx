@@ -5,8 +5,10 @@ function App() {
   return (
     <>
       <Navbar />
-      <Article name='budi'/>
-      <Article name='tono'/>
+      {/* props gunakan {} untuk data aray atau bukan string*/}
+      <Article name='budi'title={['ini adalah satu', 'ini adalah dua', 'ini adalah tiga']}/> 
+      <br />
+      <Article name='Tono'title={['ini adalah tiga', 'ini adalah dua', 'ini adalah satu']}/> 
     </>
   );
 }

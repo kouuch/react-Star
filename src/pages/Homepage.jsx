@@ -6,8 +6,12 @@ function Homepage(){
   return (
     <>
     <h1>ini halaman Homepage</h1>
-    {post.map((blog) => (
-      <Article key={blog.title} title = {blog.title} tags={blog.tags} date={blog.date} />
+    {post.map(({id, title, tags, date}) => (
+      // exmple 1
+      // <Article key={id} title = {title} tags={tags} date={date} />
+      // exmple 2 refactor
+      <Article key={id} {...{title,tags,date}} />
+      
     ))}
     </>
   )

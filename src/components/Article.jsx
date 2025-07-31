@@ -1,8 +1,10 @@
 function Article(props) {
   return (
     <>
-      <div>{props.title}</div>
-      <small>Date : {props.date}, tags {props.tags.join(", ")}</small>
+      <h3>{props.title}</h3>
+      <small>Date : {props.date}, tags : {props.tags.join(", ")}</small>
+      <br />
+      <br />
       {/* <div>
 
         index ini seperti js lenght 0, 1 ,2 untuk id atau panjangnya

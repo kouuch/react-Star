@@ -55,6 +55,14 @@ function Homepage() {
       .then((json) => setexternalPosts(json));
   }, []);
 
+  //multiple useEffect
+  useEffect(() => {
+    console.log('new post')
+  }, [post]);
+
+  useEffect(() => {
+    console.log('tesst')
+  });
   return (
     <>
       <h1>ini halaman Homepage</h1>
@@ -69,7 +77,7 @@ function Homepage() {
       ))}
       <hr />
       <h2>External Post</h2>
-      {externalPosts.map((item, index) =>(
+      {externalPosts.map((item, index) => (
         <div key={index}> -{item.title}</div>
       ))}
     </>

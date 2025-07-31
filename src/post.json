@@ -3,18 +3,21 @@
         "id": 1,
         "title": "Perjungan momomonga sama",
         "tags": ["aksi", "romance"],
-        "date": "2025-01-01"
+        "date": "2025-01-01",
+        "isNew" : true
     },
     {
         "id": 2,
         "title": "Perjungan Slime sama",
         "tags": ["aksi", "romance"],
-        "date": "2025-01-02"
+        "date": "2025-01-02",
+        "isNew" : false
     },
     {
         "id": 3,
         "title": "Perjungan luffy sama",
         "tags": ["aksi", "romance"],
-        "date": "2025-01-03"
+        "date": "2025-01-03",
+        "isNew" : false
     }
 ]

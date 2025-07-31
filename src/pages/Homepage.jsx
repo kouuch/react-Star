@@ -28,6 +28,7 @@ function Homepage() {
     <>
       <h1>ini halaman Homepage</h1>
       <br />
+      {/* <Search changeSearch={changeSearch} totalPosts={totalPosts}/> */}
       <Search changeSearch={changeSearch} totalPosts={totalPosts}/>
       {post.map(({ id, title, tags, date , isNew}) => (
         // exmple 1

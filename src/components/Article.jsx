@@ -10,6 +10,7 @@ const NewArticle = () => {
 }
 
 function Article(props) {
+  //ambil konteks
   const user = useContext(GlobalContext)
   return (
     <>
@@ -26,7 +27,8 @@ function Article(props) {
 
       </small>
       <div>
-        <small>Ditulis oleh Kouch</small>
+        {/* menampilkan daata username dari App */}
+        <small>Ditulis oleh {user.username}</small>
       </div>
       <br />
       <br />

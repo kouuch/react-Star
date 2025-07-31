@@ -1,5 +1,5 @@
-import React from "react";
-import { useState } from "react";
+import React, { Component } from "react";
+import { useState, useEffect } from "react";
 import postData from "../post.json";
 import Article from "../components/Article";
 import Search from "../components/Search";
@@ -24,6 +24,29 @@ function Homepage() {
   setposts(filterPost)
   setTotalPosts(filterPost.length)
   }
+
+  //compinentDidmount
+  //componenDidUpdate
+  // Componentwillunmount / dihancurkan m,enjalankan atau memberssihkan sidede evect seperti addWventlestener
+
+  useEffect(() => {
+    console.log('testtong')
+
+    // setInterval(() => {
+      
+    // }, interval);
+
+    return () => { //Componentwillunmount
+      // removeEventListener dll
+      //ex 2
+      // clearInterval
+      
+      console.log('clean')
+    }
+
+  }, [post]);
+  // [post] ini tempat memamntau useEfeect componenDidUpdate
+
   return (
     <>
       <h1>ini halaman Homepage</h1>

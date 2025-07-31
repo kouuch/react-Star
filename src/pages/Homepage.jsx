@@ -57,11 +57,11 @@ function Homepage() {
 
   //multiple useEffect
   useEffect(() => {
-    console.log('new post')
+    console.log("new post");
   }, [post]);
 
   useEffect(() => {
-    console.log('tesst')
+    console.log("tesst");
   });
   return (
     <>

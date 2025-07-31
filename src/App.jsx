@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Homepage";
 
 function App() {
+  
   return (
     // <>
     //   {/* props gunakan {} untuk data aray atau bukan string*/}

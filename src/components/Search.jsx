@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 function Search(props) {
   const [search, setSearch] = useState("");
-
+  
   const changeSearch = (e) => {
     setSearch(e.target.value);
     props.changeSearch(e.target.value)
@@ -12,7 +12,7 @@ function Search(props) {
       <div>
         Cari Artikel : <input onChange={changeSearch} />
       </div>
-      <small>0 data dengan pencarian kata {search}</small>
+      <small>{props.totalPosts} data dengan pencarian kata {search}</small>
       <br />
       <br />
     </>

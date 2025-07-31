@@ -14,6 +14,7 @@ function Homepage() {
   //   setSearch(e.target.value);
   // };
   const [post, setposts] = useState(postData);
+  const [totalPosts, setTotalPosts] = useState(0);
 
   const changeSearch = (value) => {
     console.log(value)
@@ -21,12 +22,13 @@ function Homepage() {
     item.title.includes(value)
   )
   setposts(filterPost)
+  setTotalPosts(filterPost.length)
   }
   return (
     <>
       <h1>ini halaman Homepage</h1>
       <br />
-      <Search changeSearch={changeSearch}/>
+      <Search changeSearch={changeSearch} totalPosts={totalPosts}/>
       {post.map(({ id, title, tags, date }) => (
         // exmple 1
         // <Article key={id} title = {title} tags={tags} date={date} />

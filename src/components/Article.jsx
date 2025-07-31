@@ -1,3 +1,6 @@
+import { useContext } from "react"
+import { GlobalContext } from "../context"
+
 const ArticleStatus = ({isNew}) =>{
   return isNew && <span>-- baru !!!</span>
 }
@@ -7,6 +10,7 @@ const NewArticle = () => {
 }
 
 function Article(props) {
+  const user = useContext(GlobalContext)
   return (
     <>
       <h3>{props.title}</h3>
@@ -21,6 +25,9 @@ function Article(props) {
         {props.isNew && <NewArticle/>}
 
       </small>
+      <div>
+        <small>Ditulis oleh Kouch</small>
+      </div>
       <br />
       <br />
 

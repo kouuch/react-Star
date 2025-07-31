@@ -2,9 +2,12 @@ import "./App.css";
 // import Article from "./components/Article";
 // import Blog from "./components/Blog";
 import Home from "./pages/Homepage";
+import { GlobalContext } from "./context";
 
 function App() {
-  
+  const user = {
+    username: "kouchh",
+  };
   return (
     // <>
     //   {/* props gunakan {} untuk data aray atau bukan string*/}
@@ -21,7 +24,9 @@ function App() {
     //   <Blog />
     // </>
     <div className="App">
-      <Home />
+      <GlobalContext.Provider value={user}>
+        <Home />
+      </GlobalContext.Provider>
     </div>
   );
 }

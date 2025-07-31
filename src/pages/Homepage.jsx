@@ -29,11 +29,11 @@ function Homepage() {
       <h1>ini halaman Homepage</h1>
       <br />
       <Search changeSearch={changeSearch} totalPosts={totalPosts}/>
-      {post.map(({ id, title, tags, date }) => (
+      {post.map(({ id, title, tags, date , isNew}) => (
         // exmple 1
         // <Article key={id} title = {title} tags={tags} date={date} />
         // exmple 2 refactor
-        <Article key={id} {...{ title, tags, date }} />
+        <Article key={id} {...{ title, tags, date , isNew}} />
       ))}
     </>
   );

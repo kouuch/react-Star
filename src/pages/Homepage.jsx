@@ -4,11 +4,13 @@ import post from '../post.json'
 import Article from '../components/Article'
 
 function Homepage(){
-  let search = ''
+  // let search = '' //biasa di js
   
+  const [search, setSearch] = useState('') //menggunakan usetate
   const changeSearch = (e) =>{
     console.log(e.target.value)
-    search = e.target.value
+    // search = e.target.value //biasa di js
+    setSearch(e.target.value)
   }
   return (
     <>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import post from "../post.json";
+import postData from "../post.json";
 import Article from "../components/Article";
 import Search from "../components/Search";
 
@@ -13,11 +13,20 @@ function Homepage() {
   //   // search = e.target.value //biasa di js
   //   setSearch(e.target.value);
   // };
+  const [post, setposts] = useState(postData);
+
+  const changeSearch = (value) => {
+    console.log(value)
+    const filterPost = postData.filter((item) =>
+    item.title.includes(value)
+  )
+  setposts(filterPost)
+  }
   return (
     <>
       <h1>ini halaman Homepage</h1>
       <br />
-      <Search />
+      <Search changeSearch={changeSearch}/>
       {post.map(({ id, title, tags, date }) => (
         // exmple 1
         // <Article key={id} title = {title} tags={tags} date={date} />

@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
-function Search() {
+function Search(props) {
   const [search, setSearch] = useState("");
 
   const changeSearch = (e) => {
     setSearch(e.target.value);
+    props.changeSearch(e.target.value)
   };
   return (
     <>

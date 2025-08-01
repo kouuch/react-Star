@@ -16,8 +16,7 @@ function Homepage() {
   // };
   const [post, setposts] = useState(postData);
   const [totalPosts, setTotalPosts] = useState(0);
-  //usf
-  const [externalPosts, setexternalPosts] = useState([]);
+
 
   const changeSearch = (value) => {
     console.log(value);
@@ -49,11 +48,7 @@ function Homepage() {
   // [post] ini tempat memamntau useEfeect componenDidUpdate
 
   //fetchdata API
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setexternalPosts(json));
-  }, []);
+  
 
   //multiple useEffect
   useEffect(() => {
@@ -75,11 +70,7 @@ function Homepage() {
         // exmple 2 refactor
         <Article key={id} {...{ title, tags, date, isNew }} />
       ))}
-      <hr />
-      <h2>External Post</h2>
-      {externalPosts.map((item, index) => (
-        <div key={index}> -{item.title}</div>
-      ))}
+      
     </>
   );
 }

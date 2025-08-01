@@ -10,23 +10,10 @@ function App() {
     username: "kouchh",
   };
   return (
-    // <>
-    //   {/* props gunakan {} untuk data aray atau bukan string*/}
-    //   <Article
-    //     name="budi"
-    //     title={["ini adalah satu", "ini adalah dua", "ini adalah tiga"]}
-    //   />
-    //   <br />
-    //   <Article
-    //     name="Tono"
-    //     title={["ini adalah tiga", "ini adalah dua", "ini adalah satu"]}
-    //   />
-    //   <br />
-    //   <Blog />
-    // </>
+
     <div className="App">
       <GlobalContext.Provider value={user}>
-        <RouterProvider router={router} />
+        <RouterProvider router={router} Fallback={<div>Loading...</div>} />
       </GlobalContext.Provider>
     </div>
   );

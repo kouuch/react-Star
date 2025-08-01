@@ -1,16 +1,20 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useLoaderData } from "react-router-dom";
 function Blogs() {
-  const [post, setposts] = useState([]);
+  // tidak dibutuhkan setalah menambahakan loader
+  // const [post, setposts] = useState([]);
+  const post = useLoaderData()
+
   //usf
-  const [externalPosts, setexternalPosts] = useState([]);
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => setposts(json));
-  }, []);
+  // const [externalPosts, setexternalPosts] = useState([]);
+  // tidak dibutuhkan setalah menambahakan loader
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //     .then((response) => response.json())
+  //     .then((json) => setposts(json));
+  // }, []);
 
   return (
     <>
